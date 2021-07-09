@@ -15,8 +15,6 @@ import { TGestureProps } from './types'
 import Card from './Card'
 
 const GestureScreen: FC<TGestureProps> = ({ width, height }) => {
-  console.log('width', width)
-  console.log('height', height)
   const boundX = width - CARD_WIDTH
   const boundY = height - CARD_HEIGHT
 
@@ -41,11 +39,11 @@ const GestureScreen: FC<TGestureProps> = ({ width, height }) => {
     onEnd: ({ velocityX, velocityY }) => {
       translateX.value = withDecay({
         velocity: velocityX,
-        clamp: [0, 300],
+        clamp: [0, boundX],
       })
       translateY.value = withDecay({
         velocity: velocityY,
-        clamp: [0, 500],
+        clamp: [0, boundY],
       })
     },
   })

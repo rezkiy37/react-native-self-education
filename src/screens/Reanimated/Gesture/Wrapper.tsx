@@ -19,3 +19,5 @@ const Wrapper: FC = () => {
     </SafeAreaView>
   )
 }
+
+export default Wrapper

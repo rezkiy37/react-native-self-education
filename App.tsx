@@ -10,9 +10,9 @@
  */
 
 import React from 'react'
-import { GestureScreen } from './src/screens'
+import { GestureScreen, IntroductionScreen } from './src/screens'
 
 const App = () => {
-  return <GestureScreen />
+  return <IntroductionScreen />
 }
 export default App

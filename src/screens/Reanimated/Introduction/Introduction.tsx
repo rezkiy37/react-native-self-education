@@ -5,6 +5,7 @@ import Animated, {
   interpolateColor,
   cancelAnimation,
   useSharedValue,
+  withSequence,
   withRepeat,
   withSpring,
 } from 'react-native-reanimated'
@@ -58,7 +59,17 @@ const Introduction: FC = () => {
   useEffect(() => {
     progress.value = withRepeat(withSpring(1), -1, true)
 
-    scale.value = withRepeat(withSpring(2), -1, true)
+    // scale.value = withRepeat(withSpring(2), -1, true)
+    scale.value = withRepeat(
+      withSequence(
+        withSpring(1.5),
+        withSpring(2),
+        withSpring(1),
+        withSpring(3),
+      ),
+      -1,
+      true,
+    )
   }, [])
 
   return (

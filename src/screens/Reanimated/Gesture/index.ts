@@ -1,1 +1,1 @@
-export { default as GestureScreen } from './Gesture'
+export { default as GestureScreen } from './Wrapper'

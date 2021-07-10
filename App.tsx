@@ -10,9 +10,9 @@
  */
 
 import React from 'react'
-import { GestureScreen, IntroductionScreen } from './src/screens'
+import { InterpolateScreen } from './src/screens'
 
 const App = () => {
-  return <GestureScreen />
+  return <InterpolateScreen />
 }
 export default App

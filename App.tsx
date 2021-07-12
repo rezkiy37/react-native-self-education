@@ -10,9 +10,9 @@
  */
 
 import React from 'react'
-import { PinchScreen } from './src/screens'
+import { TabsScreen } from './src/screens'
 
 const App = () => {
-  return <PinchScreen />
+  return <TabsScreen />
 }
 export default App

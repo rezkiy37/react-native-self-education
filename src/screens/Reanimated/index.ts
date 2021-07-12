@@ -1,5 +1,6 @@
 export * from './Introduction'
 export * from './Interpolate'
+export * from './ScrollView'
 export * from './Gesture'
 export * from './Theme'
 export * from './Pinch'

@@ -10,9 +10,9 @@
  */
 
 import React from 'react'
-import { TabsScreen } from './src/screens'
+import { ScrollViewScreen } from './src/screens'
 
 const App = () => {
-  return <TabsScreen />
+  return <ScrollViewScreen />
 }
 export default App

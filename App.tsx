@@ -10,9 +10,9 @@
  */
 
 import React from 'react'
-import { ThemeScreen } from './src/screens'
+import { PinchScreen } from './src/screens'
 
 const App = () => {
-  return <ThemeScreen />
+  return <PinchScreen />
 }
 export default App

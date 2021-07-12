@@ -10,9 +10,9 @@
  */
 
 import React from 'react'
-import { InterpolateScreen } from './src/screens'
+import { ThemeScreen } from './src/screens'
 
 const App = () => {
-  return <InterpolateScreen />
+  return <ThemeScreen />
 }
 export default App

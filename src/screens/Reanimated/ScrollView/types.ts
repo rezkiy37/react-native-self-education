@@ -9,3 +9,5 @@ export type TPageProps = {
 export type TOnGestureEventContext = {
   x: number
 }
+
+export type TGetTheClosestBreakpoint = (x: number) => number

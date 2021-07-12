@@ -9,14 +9,17 @@ import Animated, {
   useDerivedValue,
   useSharedValue,
   withDecay,
+  withSpring,
 } from 'react-native-reanimated'
+import {
+  getTheClosestBreakpoint,
+  MAX_TRANSLATE_X,
+  PAGES_BREAKPOINTS,
+  WORDS,
+} from './helpers'
 import Page from './Page'
-import { PAGE_WIDTH, scrollViewStyles } from './styles'
+import { scrollViewStyles } from './styles'
 import { TOnGestureEventContext } from './types'
-
-const WORDS: Array<string> = ["What's", 'up', 'mobile', 'devs?']
-
-const MAX_TRANSLATE_X: number = -(WORDS.length - 1) * PAGE_WIDTH
 
 const ScrollView: FC = () => {
   const translateX = useSharedValue<number>(0)
@@ -37,12 +40,12 @@ const ScrollView: FC = () => {
       cancelAnimation(translateX)
     },
     onActive: (event, ctx) => {
-      console.log(event)
-
       translateX.value = event.translationX + ctx.x
     },
-    onEnd: event => {
-      translateX.value = withDecay({ velocity: event.velocityX })
+    onEnd: (event, ctx) => {
+      translateX.value = withSpring(
+        -getTheClosestBreakpoint(event.translationX + ctx.x),
+      )
     },
   })
 

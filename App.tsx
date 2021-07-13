@@ -10,9 +10,9 @@
  */
 
 import React from 'react'
-import { ScrollViewScreen } from './src/screens'
+import { ColorPickerScreen } from './src/screens'
 
 const App = () => {
-  return <ScrollViewScreen />
+  return <ColorPickerScreen />
 }
 export default App

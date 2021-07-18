@@ -10,9 +10,9 @@
  */
 
 import React from 'react'
-import { ColorPickerScreen } from './src/screens'
+import { ProgressScreen } from './src/screens'
 
 const App = () => {
-  return <ColorPickerScreen />
+  return <ProgressScreen />
 }
 export default App
